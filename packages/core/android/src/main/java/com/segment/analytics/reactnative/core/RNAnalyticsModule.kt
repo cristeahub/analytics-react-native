@@ -147,6 +147,7 @@ class RNAnalyticsModule(context: ReactApplicationContext): ReactContextBaseJavaM
 
         if(options.getBoolean("trackAppLifecycleEvents")) {
             builder.trackApplicationLifecycleEvents()
+            builder.experimentalUseNewLifecycleMethods(false)
         }
 
         if(options.hasKey("proxy") && options.getType("proxy") == ReadableType.Map) {
